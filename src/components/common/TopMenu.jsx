@@ -162,7 +162,15 @@ const TopMenu = () => {
         {/* LINKS */}
         <div className="flex flex-col gap-6">
           {navLinks.map((item, index) => (
-            <Link key={index} href={item.path} onClick={closeMenu}>
+            <Link key={index} href={item.path} 
+             onClick={(e) => {
+               e.preventDefault();
+               closeMenu
+                router.push(item.path, {
+                  onTransitionReady: pageAnimation,
+                });
+              }}
+            >
               <div
                 className={`smNavItem opacity-0 translate-y-[20px] text-[1.3rem] text-white uppercase tracking-wide ${
                   pathname === item.path ? "underline" : ""
