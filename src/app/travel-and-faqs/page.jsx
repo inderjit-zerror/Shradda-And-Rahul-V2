@@ -1,12 +1,13 @@
-import TravelFaq from '@/components/travel-and-faq/TravelFaq'
-import React from 'react'
+import PageWrapper from "@/components/common/PageWrapper";
+import TravelFaq from "@/components/travel-and-faq/TravelFaq";
+import React from "react";
 
 const page = () => {
   return (
     <>
-    <TravelFaq />
+        <TravelFaq />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

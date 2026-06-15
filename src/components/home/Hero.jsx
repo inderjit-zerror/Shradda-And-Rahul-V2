@@ -3,9 +3,11 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import { useTransitionRouter } from "next-view-transitions";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+  const router = useTransitionRouter();
   const MainContHome = useRef();
   const Wall = useRef();
   const LeftDoor = useRef();
@@ -26,7 +28,7 @@ const Hero = () => {
     {
       img: "/images/home/Tile.png",
       title: "Wedding Itinerary",
-      link: "/wedding-itinerary",
+      link: "/",
     },
     {
       img: "/images/home/Tile.png",
@@ -133,7 +135,14 @@ const Hero = () => {
             {/* Menu_Cont */}
             <div className="grid w-fit grid-cols-4 menuScaler gap-[2vw] max-sm:grid-cols-2">
               {menuItems.map((item, index) => (
-                <Link key={index} href={item.link}>
+                <Link key={index} href={item.link} 
+                onClick={(e) => {
+                e.preventDefault();
+                router.push(item.link, {
+                  onTransitionReady: pageAnimation,
+                });
+              }}
+                >
                   <div
                     key={index}
                     className="menu-item flex cursor-pointer group flex-col opacity-0 translate-y-10 items-center gap-3 relative"
@@ -218,4 +227,44 @@ const Hero = () => {
   );
 };
 
+
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        opacity: 1,
+        scale: 1,
+        transform: "translateY(0)",
+      },
+      {
+        opacity: 0.5,
+        scale: 0.9,
+        transform: "translateY(-100px)",
+      },
+    ],
+    {
+      duration: 1000,
+      easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-old(root)",
+    }
+  );
+
+  document.documentElement.animate(
+    [
+      {
+        transform: "translateY(100%)",
+      },
+      {
+        transform: "translateY(0)",
+      },
+    ],
+    {
+      duration: 1000,
+      easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  );
+};
 export default Hero;

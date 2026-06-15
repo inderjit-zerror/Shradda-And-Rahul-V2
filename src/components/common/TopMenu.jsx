@@ -5,10 +5,12 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { RiMenu4Fill, RiMenu3Line } from "react-icons/ri";
 import { usePathname } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions"
 
 gsap.registerPlugin(ScrollTrigger);
 
 const TopMenu = () => {
+  const router = useTransitionRouter();
   const navRef = useRef(null);
   const pathname = usePathname();
 
@@ -104,7 +106,14 @@ const TopMenu = () => {
         className="w-full h-[80px] fixed top-0 left-0 z-[9999] px-5 lg:px-8 flex items-center justify-between"
       >
         {/* LOGO */}
-        <Link href={`/`} className="w-fit h-[40px] z-[1000]">
+        <Link href={`/`} className="w-fit h-[40px] z-[1000]"
+        onClick={(e) => {
+                e.preventDefault();
+                router.push(`/`, {
+                  onTransitionReady: pageAnimation,
+                });
+              }}
+        >
           <img
             src={`/logo.svg`}
             alt="Logo"
@@ -115,7 +124,14 @@ const TopMenu = () => {
         {/* DESKTOP NAV */}
         <div className="hidden lg:flex items-center gap-[2vw]">
           {navLinks.map((item, index) => (
-            <Link key={index} href={item.path}>
+            <Link key={index} href={item.path} 
+            onClick={(e) => {
+                e.preventDefault();
+                router.push(item.path, {
+                  onTransitionReady: pageAnimation,
+                });
+              }}
+            >
               <div
                 className={`relative text-[14px] F1 text-white uppercase cursor-pointer group ${
                   pathname === item.path ? "border-b border-[white]" : ""
@@ -161,6 +177,47 @@ const TopMenu = () => {
         
       </div>
     </>
+  );
+};
+
+
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        opacity: 1,
+        scale: 1,
+        transform: "translateY(0)",
+      },
+      {
+        opacity: 0.5,
+        scale: 0.9,
+        transform: "translateY(-100px)",
+      },
+    ],
+    {
+      duration: 1000,
+      easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-old(root)",
+    }
+  );
+
+  document.documentElement.animate(
+    [
+      {
+        transform: "translateY(100%)",
+      },
+      {
+        transform: "translateY(0)",
+      },
+    ],
+    {
+      duration: 1000,
+      easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-new(root)",
+    }
   );
 };
 
