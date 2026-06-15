@@ -134,22 +134,22 @@ const TopMenu = () => {
         {/* MOBILE MENU BTN */}
         <div onClick={clickCheck} className="lg:hidden z-[99999] cursor-pointer ">
           {isNavOpen ? (
-            <RiMenu3Line className="text-[2rem] text-[#9E8854]" />
+            <RiMenu3Line className="text-[2rem] text-[white]" />
           ) : (
-            <RiMenu4Fill className="text-[2rem] text-[#9E8854]" />
+            <RiMenu4Fill className="text-[2rem] text-[white]" />
           )}
         </div>
       </div>
 
       {/* MOBILE NAVIGATION */}
-      <div className="MOBILENAV fixed top-0 right-[-100%] w-full sm:w-[80%] h-screen bg-[#f8f5f1] z-[999] flex flex-col px-8 pt-[120px] pb-10">
+      <div className="MOBILENAV fixed top-0 right-[-100%] w-full sm:w-[80%] h-screen bg-[#B55744] z-[999] flex flex-col px-8 pt-[120px] pb-10">
         {/* LINKS */}
         <div className="flex flex-col gap-6">
           {navLinks.map((item, index) => (
             <Link key={index} href={item.path} onClick={closeMenu}>
               <div
-                className={`smNavItem opacity-0 translate-y-[20px] text-[1.3rem] uppercase tracking-wide ${
-                  pathname === item.path ? "text-[#9E8854]" : "text-white"
+                className={`smNavItem opacity-0 translate-y-[20px] text-[1.3rem] text-white uppercase tracking-wide ${
+                  pathname === item.path ? "underline" : ""
                 }`}
               >
                 {item.name}

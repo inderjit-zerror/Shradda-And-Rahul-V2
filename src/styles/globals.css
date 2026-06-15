@@ -74,6 +74,18 @@ button {
   scale: 0.7;
 }
 
+@media screen and (max-width: 800px) {
+  .Doorwidth {
+    width: 95vw;
+  }
+  .DoorHeight {
+    height:74vh;
+  }
+  .menuScaler {
+    scale: 1;
+  }
+}
+
 /* ----> */
 @media screen and (min-width: 1122px) {
   .Doorwidth {

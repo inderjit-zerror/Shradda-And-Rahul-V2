@@ -99,7 +99,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={MainContHome} className="w-full h-[400svh] relative flex">
+    <div ref={MainContHome} className="w-full  max-sm:h-[300svh] sm:h-[400svh] relative flex">
       <div className=" w-full h-svh sticky top-0 left-0">
         {/* All-Content-Container */}
         <div className="w-full h-full relative overflow-hidden">
@@ -122,7 +122,7 @@ const Hero = () => {
             </div>
 
             <div className="wedding-container text-center pb-[5vh]">
-              <div className="wedding-title w-[50vw] opacity-0 translate-y-10  flex mx-auto">
+              <div className="wedding-title w-[50vw] max-sm:w-[90vw] opacity-0 translate-y-10  flex mx-auto">
                 <img
                   src="/images/home/NAMES.svg"
                   className="w-full object-cover object-center"
@@ -155,7 +155,7 @@ const Hero = () => {
                       <span className="cursor-hint " />
                     </div>
 
-                    <p className="menu-text F1 font-semibold Font_CV transition-all duration-500 ease-out opacity-0 group-hover:opacity-100 text-[14px] text-white leading-[15px] uppercase max-w-[150px] text-center">
+                    <p className="menu-text F1 font-semibold Font_CV transition-all duration-500 ease-out sm:opacity-0 sm:group-hover:opacity-100 text-[14px] text-white leading-[15px] uppercase max-w-[150px] text-center">
                       {item.title}
                     </p>
                   </div>
@@ -171,13 +171,13 @@ const Hero = () => {
               ref={Wall}
               src={`/images/home/Wall.png`}
               alt="wall"
-              className="w-full h-full object-bottom object-cover  relative z-50"
+              className="w-full h-full object-bottom object-cover max-sm:object-[51.1%_100%]  relative z-50"
             />
 
             {/* Door-Container */}
             <div
               ref={doorContainer}
-              className="  DoorHeight Doorwidth absolute left-[51.2%] flex -translate-x-1/2  bottom-[7.5%] z-49 "
+              className="  DoorHeight Doorwidth absolute left-[51.2%]  flex -translate-x-1/2  bottom-[7.5%] z-49 "
             >
               {/* Left-Door */}
               <div

@@ -106,7 +106,7 @@ export default function TravelFaq() {
                 className="group w-full flex items-center justify-between text-left"
               >
                 <span
-                  className="tracking-wide uppercase Font_CV  text-[1.5rem] max-sm:text-[1.1rem] "
+                  className="tracking-wide uppercase Font_CV  text-[1.5rem] max-sm:pr-[10vh] max-sm:text-[1.1rem] "
                   style={{
                     color: "#f5f5f5",
                     
