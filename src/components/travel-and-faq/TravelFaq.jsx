@@ -87,10 +87,10 @@ export default function TravelFaq() {
 
       <div className="w-[80%] max-sm:w-full px-6 max-sm:px-[20px] flex flex-col gap-20 relative z-50">
         <h2
-          className="text-center Font_CV text-[4vw] text-white  max-sm:text-[10vw] font-semibold  F1 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
+          className="text-center Font_CV uppercase text-[4vw] text-white  max-sm:text-[10vw] font-semibold  F1 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
           
         >
-          FAQ
+          Travel and FAQs
         </h2>
 
         <div className="space-y-6 w-full z-50">
