@@ -329,12 +329,13 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full  pt-10 relative ">
-      <GradFlow className=" absolute top-0 left-0 z-[-1]"
+    <section className="w-full  py-10 relative ">
+      <GradFlow className=" fixed top-0 left-0 z-[-1]"
         config={{
-          color1: "#C17D6C",
-          color2: "#A05C49",
-          color3: "#23321D",
+          color1: "#FE951C",
+          color2: "#BA366E",
+          // color3: "",
+          color3: "#592C75",
           speed: 0.4,
           scale: 1,
           type: "stripe",
@@ -343,7 +344,7 @@ export default function FAQSection() {
 
       <div className="grid lg:grid-cols-2 min-h-screen pt-[10vh]">
         {/* LEFT SIDE */}
-        <div className="lg:sticky lg:top-0 flex items-start  max-sm:pb-[10vh] justify-center border-r border-[#dddddd]">
+        <div className="lg:sticky lg:top-0 flex items-start  max-sm:pb-[10vh] justify-center ">
           <div className="w-full px-8 lg:px-16">
             <h1 className="Font_CV text-6xl font-semibold text-white uppercase">
               Frequently Asked
@@ -355,17 +356,17 @@ export default function FAQSection() {
 
         {/* RIGHT SIDE */}
         <div className="px-8 lg:px-16  ">
-          <div className="border-t border-[#dddddd]">
+          <div className="">
             {faqData.map((item, index) => (
-              <div key={index} className="border-b border-[#dddddd]">
+              <div key={index} className="border-b border-[#dddddd] pb-5 ">
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex items-start justify-between gap-6 py-10 text-left"
+                  className="w-full flex items-start justify-between gap-6 pt-10 text-left"
                 >
                   <h3
                     className={`
                   text-[white]
-                  font-medium
+                 
                   Font_CV
                   text-[1.4rem]
                   md:text-[1.8rem]
@@ -398,7 +399,7 @@ export default function FAQSection() {
                 >
                   <div
                     ref={(el) => (innerRefs.current[index] = el)}
-                    className="pb-10 pr-16"
+                    className="pb-5 pr-16"
                   >
                     <p
                       className={`
