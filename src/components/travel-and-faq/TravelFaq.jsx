@@ -332,13 +332,12 @@ export default function FAQSection() {
     <section className="w-full  py-10 relative ">
       <GradFlow className=" fixed top-0 left-0 z-[-1]"
         config={{
-          color1: "#FE951C",
+          color1: "#592C75",
           color2: "#BA366E",
-          // color3: "",
-          color3: "#592C75",
+          color3: "#FE951C",
           speed: 0.4,
           scale: 1,
-          type: "stripe",
+          type: "wave",
         }}
       />
 
@@ -358,10 +357,10 @@ export default function FAQSection() {
         <div className="px-8 lg:px-16  ">
           <div className="">
             {faqData.map((item, index) => (
-              <div key={index} className="border-b border-[#dddddd] pb-5 ">
+              <div key={index} className="border-b border-[#dddddd] pb-2 ">
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex items-start justify-between gap-6 pt-10 text-left"
+                  className="w-full flex items-start justify-between gap-6 pt-5 text-left"
                 >
                   <h3
                     className={`
@@ -405,7 +404,7 @@ export default function FAQSection() {
                       className={`
                     text-white
                     text-lg
-                    leading-relaxed
+                    leading-tight
                     Font_CI
                     max-w-[700px]
                   `}
