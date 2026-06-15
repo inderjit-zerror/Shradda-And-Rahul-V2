@@ -86,7 +86,7 @@ const TopMenu = () => {
   {
 
     name: "Wedding Itinerary",
-    path: "/wedding-itinerary",
+    path: "/",
   },
   {
 
@@ -142,7 +142,7 @@ const TopMenu = () => {
       </div>
 
       {/* MOBILE NAVIGATION */}
-      <div className="MOBILENAV fixed top-0 right-[-100%] w-full sm:w-[80%] h-screen bg-[#B55744] z-[999] flex flex-col px-8 pt-[120px] pb-10">
+      <div className="MOBILENAV fixed top-0 right-[-100%] w-full sm:w-[80%] h-screen bg-[#5C3723] z-[999] flex flex-col px-8 pt-[120px] pb-10">
         {/* LINKS */}
         <div className="flex flex-col gap-6">
           {navLinks.map((item, index) => (
