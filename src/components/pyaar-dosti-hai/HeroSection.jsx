@@ -99,11 +99,11 @@ export default function HeroSection() {
     <section className="min-h-screen w-full relative  flex items-center justify-center px-[4vw] pt-[10vh]">
       <div className="absolute top-0 scale-[1.4] left-0 w-full h-full overflow-hidden">
         <img
-          src={`/images/home/lastIMG.jpg`}
-          className="w-full h-full scale-[1.4] object-cover object-center z-[1]"
+          src={`/images/home/SkyBg.png`}
+          className="w-full h-full scale-[1] object-cover object-center z-[1]"
         />
         {/* Brown Overlay */}
-        <div className="absolute inset-0 bg-[#5C4033]/50 z-[2]" />
+        {/* <div className="absolute inset-0 bg-[#5C4033]/50 z-[2]" /> */}
       </div>
       <div className="w-full max-w-[90vw] z-10">
         {/* Heading */}
