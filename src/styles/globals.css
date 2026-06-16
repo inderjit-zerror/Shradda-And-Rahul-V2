@@ -210,3 +210,18 @@ button {
   z-index: 1;
   animation: none !important;
 }
+
+
+
+@keyframes soundWave {
+  0%,100% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1.8);
+  }
+}
+
+.animate-sound-wave {
+  animation: soundWave 0.8s ease-in-out infinite;
+}
