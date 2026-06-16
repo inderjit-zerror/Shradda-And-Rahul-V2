@@ -78,7 +78,7 @@ const TopMenu = () => {
      {
 
     name: "Pyaar Dosti Hai",
-    path: "/",
+    path: "/pyaar-dosti-hai",
   },
   {
 

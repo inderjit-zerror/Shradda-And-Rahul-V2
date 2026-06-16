@@ -329,8 +329,8 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full  py-10 relative ">
-      <GradFlow className=" fixed top-0 left-0 z-[-1]"
+    <section className="w-full  py-10 relative overflow-hidden ">
+      {/* <GradFlow className=" fixed top-0 left-0 z-[-1]"
         config={{
           color1: "#592C75",
           color2: "#BA366E",
@@ -339,6 +339,11 @@ export default function FAQSection() {
           scale: 1,
           type: "wave",
         }}
+      /> */}
+
+      <img
+        src={`/images/home/SkyBg.png`}
+        className="w-full h-full fixed top-0 scale-[1.2] left-0 object-cover object-center z-[-1]"
       />
 
       <div className="grid lg:grid-cols-2 min-h-screen pt-[10vh]">

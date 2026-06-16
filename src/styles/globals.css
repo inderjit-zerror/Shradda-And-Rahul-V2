@@ -66,6 +66,7 @@ button {
 
 .DoorHeight {
   height: 74vh;
+
 }
 .Doorwidth {
   width: 44vh;
@@ -85,6 +86,9 @@ button {
     scale: 1;
   }
 }
+
+
+
 
 /* ----> */
 @media screen and (min-width: 1122px) {
@@ -108,6 +112,15 @@ button {
   }
 }
 
+@media screen and (max-width: 1897px) {
+  .Doorwidth {
+    width: 25vw;
+  }
+  .DoorHeight {
+    height: 84vh;
+  }
+}
+
 /* /////////////////////////////////////// */
 
 .pulse-ring {
@@ -115,7 +128,7 @@ button {
   inset: -8px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  animation: pulseRing 2.2s ease-out infinite;
+  animation: pulseRing 2.2s ease-out ;
   opacity: 0;
   pointer-events: none;
 }

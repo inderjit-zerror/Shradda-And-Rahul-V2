@@ -18,7 +18,7 @@ const Hero = () => {
     {
       img: "/images/home/Tile.png",
       title: "Pyaar Dosti Hai",
-      link: "/",
+      link: "/pyaar-dosti-hai",
     },
     {
       img: "/images/home/Tile.png",
@@ -91,13 +91,27 @@ const Hero = () => {
       ease: "power2.out",
     });
 
-    TL2.to(".menu-item", {
-      opacity: 1,
-      y: 0,
-      stagger: 0.15,
-      duration: 0.6,
-      ease: "power2.out",
-    });
+    TL2.fromTo(
+  ".menu-item",
+  {
+    opacity: 0,
+    rotationY: -90,
+    scale: 0.7,
+    z: -300,
+    y: 40,
+    transformOrigin: "center center",
+  },
+  {
+    opacity: 1,
+    rotationY: 0,
+    scale: 1,
+    z: 0,
+    y: 0,
+    stagger: 0.12,
+    duration: 0.9,
+    ease: "back.out(1.8)",
+  }
+);
   }, []);
 
   return (
@@ -146,6 +160,11 @@ const Hero = () => {
                   <div
                     key={index}
                     className="menu-item flex cursor-pointer group flex-col opacity-0 translate-y-10 items-center gap-3 relative"
+                    style={{
+  opacity: 0,
+  transformStyle: "preserve-3d",
+  backfaceVisibility: "hidden",
+}}
                   >
                     {/* Icon with click-hint animations */}
                     <div className="menu-icon h-[100px] w-[100px] relative transition-all duration-500 ease-out group-hover:rotate-45 group-hover:scale-[0.7]">
@@ -155,16 +174,16 @@ const Hero = () => {
                         className="h-full w-full object-cover"
                       />
                       {/* Pulse rings */}
-                      <span className="pulse-ring " />
+                      {/* <span className="pulse-ring " />
                       <span
                         className="pulse-ring "
                         style={{ animationDelay: "0.7s" }}
-                      />
+                      /> */}
                       {/* Cursor-click dot */}
                       <span className="cursor-hint " />
                     </div>
 
-                    <p className="menu-text F1 font-semibold Font_CV transition-all duration-500 ease-out sm:opacity-0 sm:group-hover:opacity-100 text-[14px] text-white leading-[15px] uppercase max-w-[150px] text-center">
+                    <p className="menu-text F1 font-semibold Font_CV transition-all duration-500 ease-out   opacity-100 text-[14px] text-white leading-[15px] uppercase max-w-[150px] text-center">
                       {item.title}
                     </p>
                   </div>
