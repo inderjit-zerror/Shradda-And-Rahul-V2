@@ -117,7 +117,7 @@ const TopMenu = () => {
           <img
             src={`/logo.svg`}
             alt="Logo"
-            className="h-full object-contain"
+            className={`h-full object-contain ${pathname =="/pyaar-dosti-hai"? 'text-[#651624]':'text-[white]'} `}
           />
         </Link>
 
@@ -133,11 +133,11 @@ const TopMenu = () => {
               }}
             >
               <div
-                className={`relative text-[14px] F1 text-white uppercase cursor-pointer group ${
+                className={`relative text-[14px] F1 ${pathname =="/pyaar-dosti-hai"? 'text-[#651624]':'text-white'}  uppercase cursor-pointer group ${
                   pathname === item.path ? "border-b border-[white]" : ""
                 }`}
               >
-                <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-[white] group-hover:w-full duration-300"></div>
+                <div className={`absolute bottom-0 left-0 w-0 h-[1px] ${pathname =="/pyaar-dosti-hai"? 'bg-[#651624]':'bg-[white]'}  group-hover:w-full duration-300`}></div>
 
                 {item.name}
               </div>
