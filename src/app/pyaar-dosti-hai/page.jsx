@@ -1,3 +1,4 @@
+import TravelSection from '@/components/home/TravelSection'
 import Destiny from '@/components/pyaar-dosti-hai/Destiny'
 import Hearts from '@/components/pyaar-dosti-hai/Hearts'
 import HeroSection from '@/components/pyaar-dosti-hai/HeroSection'
@@ -9,6 +10,7 @@ const page = () => {
       <HeroSection/>
       <Hearts/>
       <Destiny/>
+      <TravelSection />
     </>
   )
 }

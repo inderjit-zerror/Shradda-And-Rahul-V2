@@ -4,7 +4,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 const HomePage = () => {
   return (
+    <>
     <Hero />
+    </>
   );
 };
 
