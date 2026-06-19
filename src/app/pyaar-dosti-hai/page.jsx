@@ -9,8 +9,8 @@ const page = () => {
     <>
       <div className="w-full h-fit overflow-x-hidden relative">
         <HeroSection />
-        <Hearts />
-        <Destiny />
+        {/* <Hearts /> */}
+        {/* <Destiny /> */}
         <TravelSection />
       </div>
     </>
