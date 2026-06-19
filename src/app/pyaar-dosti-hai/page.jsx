@@ -1,3 +1,4 @@
+import ChaptersAccordion from "@/components/common/ChaptersAccordion";
 import TravelSection from "@/components/home/TravelSection";
 import Destiny from "@/components/pyaar-dosti-hai/Destiny";
 import Hearts from "@/components/pyaar-dosti-hai/Hearts";
@@ -11,7 +12,11 @@ const page = () => {
         <HeroSection />
         {/* <Hearts /> */}
         {/* <Destiny /> */}
+
+        <div className=" w-full h-fit overflow-x-hidden relative Collector ">
         <TravelSection />
+        <ChaptersAccordion/>
+        </div>
       </div>
     </>
   );
