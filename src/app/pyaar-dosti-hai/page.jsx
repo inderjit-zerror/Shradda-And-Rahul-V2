@@ -8,7 +8,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="w-full h-fit overflow-x-hidden relative bg-[#f6f6f6] ">
+      <div className="w-full h-fit overflow-x-hidden relative">
         <HeroSection />
         {/* <Hearts /> */}
         {/* <Destiny /> */}

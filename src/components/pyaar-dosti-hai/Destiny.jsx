@@ -14,7 +14,6 @@ const Destiny = () => {
         start: "top top",
         end: "top -20%",
         scrub: true,
-        // markers: true
       },
     });
 

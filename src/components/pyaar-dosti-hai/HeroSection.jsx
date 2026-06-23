@@ -448,7 +448,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="max-sm:min-h-screen h-screen w-full relative flex items-center justify-center px-[4vw] pt-[10vh] z-9999 mb-[40vh]">
+    <section className="min-h-screen w-full relative flex items-center justify-center px-[4vw] pt-[10vh]">
       <div className="absolute top-0 scale-[1.4] left-0 w-full h-full overflow-hidden">
         <img
           src="/images/home/SkyBg.png"
