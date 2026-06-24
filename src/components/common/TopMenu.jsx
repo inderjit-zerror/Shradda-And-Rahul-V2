@@ -88,7 +88,7 @@ const TopMenu = () => {
   {
 
     name: "Wedding Itinerary",
-    path: "/",
+    path: "/wedding-itinerary",
   },
   {
 

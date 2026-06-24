@@ -14,41 +14,51 @@
   scroll-behavior: smooth;
   user-select: none;
 }
+
 body {
   overflow-x: hidden;
   width: 100%;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 .scroller_none::-webkit-scrollbar {
   display: none;
 }
+
 button {
   cursor: pointer;
 }
+
 .center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .padding {
   padding: 1rem;
 }
+
 @media (min-width: 750px) {
   .padding {
     padding: 2.5rem;
   }
 }
+
 .cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .h-screen {
   height: 100vh !important;
   height: 100svh !important;
 }
+
 .container {
   max-width: 1440px;
   margin-inline: auto;
@@ -62,15 +72,17 @@ button {
 .Font_CI {
   font-family: CI;
 }
+
 /* =======================================*/
 
 .DoorHeight {
   height: 74vh;
-
 }
+
 .Doorwidth {
   width: 44vh;
 }
+
 .menuScaler {
   scale: 0.7;
 }
@@ -79,25 +91,26 @@ button {
   .Doorwidth {
     width: 95vw;
   }
+
   .DoorHeight {
-    height:74vh;
+    height: 74vh;
   }
+
   .menuScaler {
     scale: 1;
   }
 }
-
-
-
 
 /* ----> */
 @media screen and (min-width: 1122px) {
   .Doorwidth {
     width: 26vw;
   }
+
   .DoorHeight {
     height: 73.5vh;
   }
+
   .menuScaler {
     scale: 1;
   }
@@ -107,6 +120,7 @@ button {
   .Doorwidth {
     width: 25vw;
   }
+
   .DoorHeight {
     height: 85vh;
   }
@@ -116,6 +130,7 @@ button {
   .Doorwidth {
     width: 25vw;
   }
+
   .DoorHeight {
     height: 84vh;
   }
@@ -128,10 +143,11 @@ button {
   inset: -8px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  animation: pulseRing 2.2s ease-out ;
+  animation: pulseRing 2.2s ease-out;
   opacity: 0;
   pointer-events: none;
 }
+
 .pulse-ring:nth-child(2) {
   animation-delay: 0.7s;
 }
@@ -155,6 +171,7 @@ button {
     transform: scale(0.75);
     opacity: 0.9;
   }
+
   100% {
     transform: scale(1.7);
     opacity: 0;
@@ -167,14 +184,17 @@ button {
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
   }
+
   65% {
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 1;
   }
+
   80% {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0.7;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
@@ -187,9 +207,6 @@ button {
   animation: none;
   opacity: 0;
 }
-
-
-
 
 ::view-transition-group(root) {
   z-index: auto !important;
@@ -211,17 +228,622 @@ button {
   animation: none !important;
 }
 
-
-
-@keyframes soundWave {
-  0%,100% {
+@keyframes sound-wave {
+  0%,
+  100% {
     transform: scaleY(0.5);
   }
+
   50% {
     transform: scaleY(1.8);
   }
 }
 
 .animate-sound-wave {
-  animation: soundWave 0.8s ease-in-out infinite;
+  animation: sound-wave 0.8s ease-in-out infinite;
 }
+
+/* ;;;;;;;;;;;;;;;;; */
+.gg {
+  background-color: #ba8664;
+  opacity: 0.9;
+  background-image: radial-gradient(rgba(140, 52, 80, 0.539).8px, #ba8664 0.8px);
+  background-size: 8px 8px;
+}
+
+
+/* ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
+/* 
+#How_to_Nail_it_Cntr {
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+  padding-top: 16.4705882353vw;
+}
+
+#How_to_Nail_it_Cntr .row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 106.25rem;
+  padding-left: 5.8823529412vw;
+  padding-right: 5.8823529412vw;
+}
+
+#How_to_Nail_it_Cntr .pictos-wrapper {
+  margin-bottom: 19.4117647059vw;
+  position: relative;
+}
+
+#How_to_Nail_it_Cntr .line-wrapper,
+#How_to_Nail_it_Cntr .pictos-label {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#How_to_Nail_it_Cntr .st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+#How_to_Nail_it_Cntr .st1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+#How_to_Nail_it_Cntr .anime-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+#How_to_Nail_it_Cntr .line-wrapper svg path {
+  stroke-dasharray: 8945.95;
+  stroke-dashoffset: -8945.95;
+}
+
+.title_inner-nail {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.title_inner-nail h2 {
+  font-size: 9vw;
+  line-height: 0.8;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title_inner-nail h2 span {
+  display: inline-block;
+  transform-origin: top;
+}
+
+.title_inner-nail .arrow {
+  transform: translateY(-50%) scaleY(0.5);
+  transform-origin: top;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  opacity: 0;
+}
+
+.process-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.process-item {
+  position: relative;
+  padding-left: 90px;
+  margin-bottom: 48px;
+}
+
+.process-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #111827;
+  color: #d8b394;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.process-text {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: -0.03em;
+} */
+
+/* ====================================
+   WEDDING ITINERARY SECTION - STYLES
+   Only CSS used in Nails_Cntr Component
+   ==================================== */
+
+/* Main Container */
+#How_to_Nail_it_Cntr {
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+  padding-top: 16.4705882353vw;
+}
+
+#How_to_Nail_it_Cntr .row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 106.25rem;
+  padding-left: 5.8823529412vw;
+  padding-right: 5.8823529412vw;
+}
+
+#How_to_Nail_it_Cntr .row.title {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 106.25rem;
+  padding-left: 5.8823529412vw;
+  padding-right: 5.8823529412vw;
+}
+
+/* Title Styles */
+#How_to_Nail_it_Cntr .row.title h3 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#How_to_Nail_it_Cntr .row.title p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-family: var(--primary-font-Hel);
+}
+
+/* Line Container Trigger */
+#How_to_Nail_it_Cntr .row.line_cntr_trigger {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 106.25rem;
+  padding-left: 5.8823529412vw;
+  padding-right: 5.8823529412vw;
+}
+
+/* Pictos Wrapper */
+#How_to_Nail_it_Cntr .pictos-wrapper {
+  margin-bottom: 19.4117647059vw;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Line Wrapper - SVG Animation */
+#How_to_Nail_it_Cntr .line-wrapper {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#How_to_Nail_it_Cntr .line-wrapper svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#How_to_Nail_it_Cntr .line-wrapper svg path {
+  stroke-dasharray: 8945.95;
+  stroke-dashoffset: -8945.95;
+}
+
+#How_to_Nail_it_Cntr .st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+#How_to_Nail_it_Cntr .st1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+/* Anime Container - Lottie Animation */
+#How_to_Nail_it_Cntr .pictos {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#How_to_Nail_it_Cntr .anime-container {
+  margin-top: 1px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#How_to_Nail_it_Cntr .anime-container svg {
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* Pictos Label Container */
+#How_to_Nail_it_Cntr .pictos-label {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Individual Pictos */
+#How_to_Nail_it_Cntr .pictos-label .picto-one {
+  left: 35.2941176471vw;
+  position: absolute;
+  text-align: center;
+  top: 29.4117647059vw;
+  width: 14.7058823529vw;
+}
+
+#How_to_Nail_it_Cntr .pictos-label .picto-two {
+  left: 5.8823529412vw;
+  position: absolute;
+  text-align: center;
+  top: 64.7058823529vw;
+  width: 14.7058823529vw;
+}
+
+#How_to_Nail_it_Cntr .pictos-label .picto-three {
+  bottom: 29.4117647059vw;
+  left: 55.8823529412vw;
+  position: absolute;
+  text-align: center;
+  width: 14.7058823529vw;
+}
+
+#How_to_Nail_it_Cntr .pictos-label .picto-four {
+  bottom: -2.9411764706vw;
+  left: 17.6470588235vw;
+  position: absolute;
+  text-align: center;
+  width: 14.7058823529vw;
+}
+
+/* Picto Number Style */
+#How_to_Nail_it_Cntr .pictos-label .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#How_to_Nail_it_Cntr .pictos-label .number svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Picto Text */
+#How_to_Nail_it_Cntr .pictos-label .p-normal {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-family: font1;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Title Inner Nail */
+.title_inner-nail {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.title_inner-nail h2 {
+  font-family: font2;
+  font-size: 9vw;
+  line-height: 0.8;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: -2px;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.title_inner-nail h2 span {
+  display: inline-block;
+  transform-origin: top;
+  transform: translateY(100%) skewX(10deg);
+  opacity: 0;
+}
+
+.title_inner-nail h2 span:nth-last-child(4),
+.title_inner-nail h2 span:nth-last-child(5),
+.title_inner-nail h2 span:nth-last-child(6),
+.title_inner-nail h2 span:nth-last-child(7) {
+  color: #7546ff !important;
+}
+
+.title_inner-nail h2 .serif-italic {
+  font-style: italic;
+}
+
+.title_inner-nail .arrow {
+  transform: translateY(-50%) scaleY(0.5);
+  transform-origin: top;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_inner-nail .arrow svg {
+  width: 113px;
+  height: 148px;
+}
+
+/* ====================================
+   RESPONSIVE BREAKPOINTS
+   ==================================== */
+
+/* Small Screens (max-width: 500px) */
+@media only screen and (max-width: 500px) {
+  #How_to_Nail_it_Cntr .pictos-label .picto-one {
+    width: 20vw;
+    left: 53.294118vw;
+    top: 33.411765vw;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .p-normal {
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-family: font1;
+    font-weight: 500;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .picto-two {
+    width: 24vw;
+    top: 75.705882vw;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .picto-three {
+    width: 23vw;
+    bottom: 21.411765vw;
+    left: 66.882353vw;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .picto-four {
+    width: 22vw;
+    bottom: -11.941176vw;
+    left: 18.647059vw;
+  }
+
+  .line-wrapper svg path {
+    stroke-dasharray: 0 !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .number svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .title_inner-nail .arrow {
+    margin-top: 20px;
+  }
+
+  #How_to_Nail_it_Cntr .arrow svg {
+    width: 50px;
+  }
+
+  #How_to_Nail_it_Cntr {
+    padding: 20vw 0;
+  }
+
+  #How_to_Nail_it_Cntr .row {
+    padding: 0;
+  }
+}
+
+/* Medium Screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .title_inner-nail h2 {
+    font-family: font2;
+    font-size: 8.4vw;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0px;
+    position: relative;
+    text-align: center;
+    transform: scale(1);
+  }
+}
+
+/* Tablets (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  #How_to_Nail_it_Cntr .row {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Tablets (max-width: 835px) */
+@media screen and (max-width: 835px) {
+  .title_inner-nail h2 {
+    transform: scale(0.85);
+  }
+}
+
+/* Tablets (max-width: 960px) */
+@media only screen and (max-width: 960px) {
+  #How_to_Nail_it_Cntr {
+    padding-top: calc(4.5rem + 17.33333vw);
+  }
+
+  #How_to_Nail_it_Cntr .row {
+    padding-left: calc(2.25rem + 5.33333vw);
+  }
+
+  .title_inner-nail h2 {
+    font-size: calc(3.625rem + 12.66667vw);
+  }
+
+  .title_inner-nail .arrow {
+    margin-top: 40px;
+  }
+
+  #How_to_Nail_it_Cntr .arrow svg {
+    width: 64px;
+  }
+}
+
+/* Tablets (max-width: 1100px) */
+@media screen and (max-width: 1100px) {
+  #How_to_Nail_it_Cntr .row {
+    padding-left: calc(2.25rem + 5.33333vw);
+  }
+}
+
+/* Desktop (min-width: 1200px) */
+@media only screen and (min-width: 1200px) {
+  .title_inner-nail h2 {
+    font-size: 10.5vw;
+  }
+}
+
+/* Large Desktop (min-width: 1700px) */
+@media only screen and (min-width: 1700px) {
+  #How_to_Nail_it_Cntr {
+    padding-top: 280px;
+  }
+
+  #How_to_Nail_it_Cntr .row {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-wrapper {
+    margin-bottom: 330px;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .picto-one {
+    width: 250px;
+    left: 600px;
+    top: 500px;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .picto-two {
+    width: 250px;
+    left: 100px;
+    top: 1100px;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .picto-three {
+    left: 950px;
+    bottom: 500px;
+  }
+
+  #How_to_Nail_it_Cntr .pictos-label .picto-four {
+    left: 300px;
+    bottom: -50px;
+  }
+}
+
+/* ====================================
+   TAILWIND/UTILITY CLASSES
+   (Used in React JSX)
+   ==================================== */
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-\[5rem\] {
+  font-size: 5rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+/* .uppercase {
+  text-transform: uppercase;
+} */
+
+.text-\[1rem\] {
+  font-size: 1rem;
+}
+
+.text-\[black\] {
+  color: white;
+}
+
+.text-black {
+  color: white;
+}
+

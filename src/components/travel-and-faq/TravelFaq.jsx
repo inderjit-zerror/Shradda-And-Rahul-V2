@@ -329,7 +329,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full  py-10 relative overflow-hidden ">
+    <section className="w-full  py-10 gg relative overflow-hidden ">
       {/* <GradFlow className=" fixed top-0 left-0 z-[-1]"
         config={{
           color1: "#592C75",
@@ -341,10 +341,19 @@ export default function FAQSection() {
         }}
       /> */}
 
-      <img
+       {/* <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundColor: "#9D3759",
+      opacity: 0.15, // Adjust from 0.1 to 0.4 as needed
+      mixBlendMode: "multiply",
+    }}
+  /> */}
+
+      {/* <img
         src={`/images/home/SkyBg.png`}
         className="w-full h-full fixed top-0 scale-[1.2] left-0 object-cover object-center z-[-1]"
-      />
+      /> */}
 
       <div className="grid lg:grid-cols-2 min-h-screen pt-[10vh]">
         {/* LEFT SIDE */}

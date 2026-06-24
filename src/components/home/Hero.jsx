@@ -28,7 +28,7 @@ const Hero = () => {
     {
       img: "/images/home/Tile.png",
       title: "Wedding Itinerary",
-      link: "/",
+      link: "/wedding-itinerary",
     },
     {
       img: "/images/home/Tile.png",
