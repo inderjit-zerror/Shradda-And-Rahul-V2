@@ -101,12 +101,12 @@
 
 //       <div className="w-full max-w-[90vw] z-10">
 //         <div className="text-center">
-//           <h1 className="text-[4.5rem] font-semibold leading-none Font_CV uppercase text-white">
+//           <h1 className="text-[4.5rem] font-semibold leading-none Font_CV uppercase text-[#F1E2C6]">
 //             Pyaar Dosti Hai
 //           </h1>
 
 //           <div className="flex justify-center items-center gap-[0.8rem] mt-[1.5rem]">
-//             <p className="uppercase Font_CV tracking-[0.25rem] text-white text-[1.1rem]">
+//             <p className="uppercase Font_CV tracking-[0.25rem] text-[#F1E2C6] text-[1.1rem]">
 //               Love Is Friendship
 //             </p>
 //           </div>
@@ -117,7 +117,7 @@
 
 //           {/* Left Card */}
 //           <div className="flex-1 w-full sm:max-w-[30vw]">
-//             <p className="uppercase text-[0.8rem] Font_CV tracking-[0.25rem] text-white mb-[0.6rem]">
+//             <p className="uppercase text-[0.8rem] Font_CV tracking-[0.25rem] text-[#F1E2C6] mb-[0.6rem]">
 //               From
 //             </p>
 
@@ -168,9 +168,9 @@
 //                     />
 
 //                     {!isHindiPlaying ? (
-//                       <HiPlay className="text-[1.1rem] text-white transition-all duration-300 group-hover:scale-110" />
+//                       <HiPlay className="text-[1.1rem] text-[#F1E2C6] transition-all duration-300 group-hover:scale-110" />
 //                     ) : (
-//                       <HiSpeakerWave className="text-[1.2rem] text-white animate-pulse" />
+//                       <HiSpeakerWave className="text-[1.2rem] text-[#F1E2C6] animate-pulse" />
 //                     )}
 //                   </button>
 
@@ -200,13 +200,13 @@
 //           </div>
 
 //           {/* Center Swap */}
-//           <div className="w-[3rem] h-[3rem] rounded-full flex items-center justify-center text-white text-[1.2rem]">
+//           <div className="w-[3rem] h-[3rem] rounded-full flex items-center justify-center text-[#F1E2C6] text-[1.2rem]">
 //             ⇄
 //           </div>
 
 //           {/* Right Card */}
 //           <div className="flex-1 w-full sm:max-w-[30vw]">
-//             <p className="uppercase text-[0.8rem] Font_CV tracking-[0.25rem] text-white mb-[0.6rem]">
+//             <p className="uppercase text-[0.8rem] Font_CV tracking-[0.25rem] text-[#F1E2C6] mb-[0.6rem]">
 //               To
 //             </p>
 
@@ -352,6 +352,8 @@
 import { useEffect, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { HiPlay, HiSpeakerWave } from "react-icons/hi2";
+import DotField from "../common/DotField";
+import BorderGlow from "../common/BorderGlow";
 
 export default function HeroSection() {
   const translations = {
@@ -435,10 +437,26 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="min-h-screen w-full relative gg flex items-center justify-center px-[4vw] pt-[0vh]">
+    <section className="h-screen w-full relative  flex items-center justify-center px-[4vw] pt-[0vh]">
+      <div className="absolute inset-0 w-full h-full bg-[#6C1D35]">
+        <DotField
+          dotRadius={2.5}
+          dotSpacing={14}
+          bulgeStrength={67}
+          glowRadius={160}
+          sparkle={false}
+          waveAmplitude={0}
+          cursorRadius={500}
+          cursorForce={0.1}
+          bulgeOnly
+          gradientFrom="rgba(240, 225, 196, 0.5)"
+          gradientTo="rgba(214, 184, 146, 0.25)"
+          glowColor="rgba(214, 184, 146, 0.0)"
+        />
+      </div>
 
-       <div className="absolute inset-0 opacity-[0.08] mix-blend-overlay bg-[url('/noisy.png')] bg-repeat" />
-  
+      {/* <div className="absolute inset-0 opacity-[0.08] mix-blend-overlay bg-[url('/noisy.png')] bg-repeat" /> */}
+
       {/* Background */}
       {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden scale-[1.4]">
         <img
@@ -447,17 +465,16 @@ export default function HeroSection() {
           className="w-full h-full object-cover object-center"
         />
       </div> */}
-     
 
       <div className="w-full max-w-[90vw] z-10">
         {/* Heading */}
         <div className="text-center">
-          <h1 className="text-[5.5rem] font-semibold leading-none Font_CV uppercase text-white">
+          <h1 className="text-[5.5rem] font-semibold leading-none Font_CV uppercase text-[#F1E2C6]">
             Pyaar Dosti Hai
           </h1>
 
           <div className="flex justify-center items-center mt-[1rem]">
-            <p className=" capitalize tracking-tight text-white text-[0.9rem] leading-[1.1rem]">
+            <p className=" capitalize tracking-tight text-[#F1E2C6] text-[0.9rem] leading-[1.1rem]">
               Every great love story is built on friendship, and every
               friendship deserves a forever. <br />
               Together, we celebrate a bond that began with friendship, grew
@@ -468,36 +485,48 @@ export default function HeroSection() {
 
         {/* Translation Section */}
         <div className="mt-[3rem] flex justify-center">
-          <div className="w-full max-w-[42rem]">
-            <p className="uppercase text-[0.8rem] Font_CV tracking-[0.25rem] text-white mb-[0.6rem]">
+          <div className="w-full max-w-[42rem] flex flex-col gap-5">
+            <p className="uppercase text-[0.8rem] Font_CV tracking-[0.25rem] text-[#F1E2C6] mb-[0.6rem]">
               Translation
             </p>
 
             {/* Language Dropdown */}
             <div className="relative">
-              <button
-                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="w-full bg-white border border-[#e7ddd4] rounded-[1.1rem] px-[1.2rem] py-[0.8rem] flex justify-between items-center"
+              <BorderGlow
+                edgeSensitivity={30}
+                glowColor="40 80 80"
+                backgroundColor="#120F17"
+                borderRadius={28}
+                glowRadius={40}
+                glowIntensity={1}
+                coneSpread={25}
+                animated={false}
+                colors={["#F1E0C5", "#D6B892", "#B76E79"]}
               >
-                <div className="flex items-center gap-[0.8rem]">
-                  <span className="text-[1.5rem] Font_CV">
-                    {translations[selectedLanguage].symbol}
-                  </span>
+                <button
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  className="w-full bg-[#F1E2C6] border border-[#e7ddd4] rounded-[1.1rem] px-[1.2rem] py-[0.8rem] flex justify-between items-center"
+                >
+                  <div className="flex items-center gap-[0.8rem]">
+                    <span className="text-[1.5rem] Font_CV">
+                      {translations[selectedLanguage].symbol}
+                    </span>
 
-                  <span className="text-[0.95rem] Font_CV uppercase text-[#4b403d]">
-                    {selectedLanguage}
-                  </span>
-                </div>
+                    <span className="text-[0.95rem] Font_CV uppercase text-[#4b403d]">
+                      {selectedLanguage}
+                    </span>
+                  </div>
 
-                <RiArrowDropDownLine
-                  className={`text-[1.8rem] transition-all duration-300 ${
-                    isLanguageOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+                  <RiArrowDropDownLine
+                    className={`text-[1.8rem] transition-all duration-300 ${
+                      isLanguageOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </BorderGlow>
 
               {isLanguageOpen && (
-                <div className="absolute top-[110%] left-0 w-full bg-white border border-[#e7ddd4] rounded-[1.1rem] overflow-hidden shadow-xl z-50">
+                <div className="absolute top-[110%] left-0 w-full bg-[#F1E2C6] border border-[#e7ddd4] rounded-[1.1rem] overflow-hidden shadow-xl z-50">
                   {Object.entries(translations).map(([lang, data]) => (
                     <button
                       key={lang}
@@ -529,7 +558,18 @@ export default function HeroSection() {
             </div>
 
             {/* Translation Card */}
-            <div className="mt-[1rem] bg-white border border-[#e7ddd4] rounded-[1.5rem] p-[1.6rem] min-h-[16rem] flex flex-col justify-between">
+            <BorderGlow
+                edgeSensitivity={30}
+                glowColor="40 80 80"
+                backgroundColor="#120F17"
+                borderRadius={28}
+                glowRadius={40}
+                glowIntensity={1}
+                coneSpread={25}
+                animated={false}
+                colors={["#F1E0C5", "#D6B892", "#B76E79"]}
+              >
+            <div className=" bg-[#F1E2C6] border border-[#e7ddd4] rounded-[1.5rem] p-[1.6rem] min-h-[16rem] flex flex-col justify-between">
               <div>
                 <h2 className="text-[2.8rem] leading-[1.1] Font_CV text-[#651624]">
                   {translations[selectedLanguage].text}
@@ -573,9 +613,9 @@ export default function HeroSection() {
                   />
 
                   {!isPlaying ? (
-                    <HiPlay className="text-white text-[1.1rem] transition-all duration-300 group-hover:scale-110" />
+                    <HiPlay className="text-[#F1E2C6] text-[1.1rem] transition-all duration-300 group-hover:scale-110" />
                   ) : (
-                    <HiSpeakerWave className="text-white text-[1.3rem] animate-pulse" />
+                    <HiSpeakerWave className="text-[#F1E2C6] text-[1.3rem] animate-pulse" />
                   )}
                 </button>
 
@@ -603,6 +643,7 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
+            </BorderGlow>
           </div>
         </div>
       </div>

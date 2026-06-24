@@ -245,17 +245,17 @@ button {
 
 /* ;;;;;;;;;;;;;;;;; */
 .gg {
-  background-color: #ba8664;
-  opacity: 0.9;
-  background-image: radial-gradient(rgba(140, 52, 80, 0.539).8px, #ba8664 0.8px);
-  background-size: 8px 8px;
+  background-color: #6C1D35;
+  opacity:1;
+  background-image: radial-gradient(rgba(140, 52, 80, 0.539).8px, #6C1D35 1px);
+  /* background-size: 8px 8px; */
 }
 
 
 /* ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
 /* 
 #How_to_Nail_it_Cntr {
-  background-color: #fff;
+  background-color: #F1E2C6;
   width: 100%;
   position: relative;
   padding-top: 16.4705882353vw;
@@ -287,14 +287,14 @@ button {
 
 #How_to_Nail_it_Cntr .st0 {
   fill: none;
-  stroke: #fff;
+  stroke: #F1E2C6;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
 #How_to_Nail_it_Cntr .st1 {
   fill: none;
-  stroke: #fff;
+  stroke: #F1E2C6;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -371,7 +371,7 @@ button {
   font-size: 3rem;
   line-height: 1;
   font-weight: 400;
-  color: #fff;
+  color: #F1E2C6;
   letter-spacing: -0.03em;
 } */
 
@@ -382,7 +382,7 @@ button {
 
 /* Main Container */
 #How_to_Nail_it_Cntr {
-  background-color: #fff;
+  background-color: #F1E2C6;
   width: 100%;
   position: relative;
   padding-top: 16.4705882353vw;
@@ -414,13 +414,13 @@ button {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #fff;
+  color: #F1E2C6;
 }
 
 #How_to_Nail_it_Cntr .row.title p {
   font-size: 1rem;
   text-transform: uppercase;
-  color: #fff;
+  color: #F1E2C6;
   text-align: center;
   font-family: var(--primary-font-Hel);
 }
@@ -466,14 +466,14 @@ button {
 
 #How_to_Nail_it_Cntr .st0 {
   fill: none;
-  stroke: #fff;
+  stroke: #F1E2C6;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
 #How_to_Nail_it_Cntr .st1 {
   fill: none;
-  stroke: #fff;
+  stroke: #F1E2C6;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -558,7 +558,7 @@ button {
 
 /* Picto Text */
 #How_to_Nail_it_Cntr .pictos-label .p-normal {
-  color: #fff;
+  color: #F1E2C6;
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 1;
@@ -636,7 +636,7 @@ button {
   }
 
   #How_to_Nail_it_Cntr .pictos-label .p-normal {
-    color: #fff;
+    color: #F1E2C6;
     font-size: 11px;
     letter-spacing: 1px;
     line-height: 1;
@@ -840,10 +840,10 @@ button {
 }
 
 .text-\[black\] {
-  color: white;
+  color: #F1E2C6;
 }
 
 .text-black {
-  color: white;
+  color: #F1E2C6;
 }
 

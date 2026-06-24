@@ -23,7 +23,7 @@ const Hero = () => {
     {
       img: "/images/home/Tile.png",
       title: "From Marrakech, with Love",
-      link: "/",
+      link: "/venu",
     },
     {
       img: "/images/home/Tile.png",

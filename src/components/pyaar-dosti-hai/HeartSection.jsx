@@ -178,7 +178,7 @@ const HeartSection = () => {
     <section
       id="heart"
       ref={sectionRef}
-      className="relative w-full h-[400vh] bg-[#f5f5f5]"
+      className="relative w-full h-[400vh] bg-[#F1E2C6]"
     >
       <div ref={containerRef} className="absolute inset-0 w-full h-full">
         {positions.map((pos, index) => {

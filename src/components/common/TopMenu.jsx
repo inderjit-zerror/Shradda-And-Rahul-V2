@@ -83,7 +83,7 @@ const TopMenu = () => {
   {
 
     name: "From Marrakech, with Love",
-    path: "/",
+    path: "/venu",
   },
   {
 
@@ -117,7 +117,7 @@ const TopMenu = () => {
           <img
             src={`/logo.svg`}
             alt="Logo"
-            className="h-full object-contain"
+            className="h-full object-contain text-[#F1E2C6]"
           />
         </Link>
 
@@ -133,11 +133,11 @@ const TopMenu = () => {
               }}
             >
               <div
-                className={`relative text-[14px] F1 text-white uppercase cursor-pointer group ${
-                  pathname === item.path ? "border-b border-[white]" : ""
+                className={`relative text-[14px] F1 text-[#F1E2C6] uppercase cursor-pointer group ${
+                  pathname === item.path ? "border-b border-[#F1E2C6]" : ""
                 }`}
               >
-                <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-[white] group-hover:w-full duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#F1E2C6] group-hover:w-full duration-300"></div>
 
                 {item.name}
               </div>
@@ -150,9 +150,9 @@ const TopMenu = () => {
         {/* MOBILE MENU BTN */}
         <div onClick={clickCheck} className="lg:hidden z-[99999] cursor-pointer ">
           {isNavOpen ? (
-            <RiMenu3Line className="text-[2rem] text-[white]" />
+            <RiMenu3Line className="text-[2rem] text-[#F1E2C6]" />
           ) : (
-            <RiMenu4Fill className="text-[2rem] text-[white]" />
+            <RiMenu4Fill className="text-[2rem] text-[#F1E2C6]" />
           )}
         </div>
       </div>
@@ -172,7 +172,7 @@ const TopMenu = () => {
               }}
             >
               <div
-                className={`smNavItem opacity-0 translate-y-[20px] text-[1.3rem] text-white uppercase tracking-wide ${
+                className={`smNavItem opacity-0 translate-y-[20px] text-[1.3rem] text-[#F1E2C6] uppercase tracking-wide ${
                   pathname === item.path ? "underline" : ""
                 }`}
               >

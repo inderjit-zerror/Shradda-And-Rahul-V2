@@ -87,7 +87,7 @@
 
 //       <div className="w-[80%] max-sm:w-full px-6 max-sm:px-[20px] flex flex-col gap-20 relative z-50">
 //         <h2
-//           className="text-center Font_CV uppercase text-[4vw] text-white  max-sm:text-[10vw] font-semibold  F1 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
+//           className="text-center Font_CV uppercase text-[4vw] text-[#F1E2C6]  max-sm:text-[10vw] font-semibold  F1 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
 
 //         >
 //           Travel and FAQs
@@ -147,7 +147,7 @@
 //                 }}
 //               >
 //                 <div
-//                   className="mt-4 text-[22px] Font_CI text-white max-sm:text-[1.1rem]"
+//                   className="mt-4 text-[22px] Font_CI text-[#F1E2C6] max-sm:text-[1.1rem]"
 
 //                 >
 //                   {faq.answer}
@@ -175,6 +175,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
 import { GradFlow } from "gradflow";
+import DotField from "../common/DotField";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -329,7 +330,24 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full  py-10 gg relative overflow-hidden ">
+    <section className="w-full  py-10 relative overflow-hidden ">
+      <div className="fixed top-0 left-0 inset-0 w-full h-full bg-[#6C1D35] z-[-1]">
+        <DotField
+          dotRadius={2.5}
+          dotSpacing={14}
+          bulgeStrength={67}
+          glowRadius={160}
+          sparkle={false}
+          waveAmplitude={0}
+          cursorRadius={500}
+          cursorForce={0.1}
+          bulgeOnly
+          gradientFrom="rgba(240, 225, 196, 0.5)"
+          gradientTo="rgba(214, 184, 146, 0.25)"
+          glowColor="rgba(214, 184, 146, 0.0)"
+        />
+      </div>
+
       {/* <GradFlow className=" fixed top-0 left-0 z-[-1]"
         config={{
           color1: "#592C75",
@@ -341,7 +359,7 @@ export default function FAQSection() {
         }}
       /> */}
 
-       {/* <div
+      {/* <div
     className="absolute inset-0 z-0"
     style={{
       backgroundColor: "#9D3759",
@@ -359,7 +377,7 @@ export default function FAQSection() {
         {/* LEFT SIDE */}
         <div className="lg:sticky lg:top-0 flex items-start  max-sm:pb-[10vh] justify-center ">
           <div className="w-full px-8 lg:px-16">
-            <h1 className="Font_CV text-6xl font-semibold text-white uppercase">
+            <h1 className="Font_CV text-6xl font-semibold text-[#F1E2C6] uppercase">
               Frequently Asked
               <br />
               Questions
@@ -378,7 +396,7 @@ export default function FAQSection() {
                 >
                   <h3
                     className={`
-                  text-[white]
+                  text-[#F1E2C6]
                  
                   Font_CV
                   text-[1.4rem]
@@ -396,7 +414,7 @@ export default function FAQSection() {
                   w-12 h-12
                   rounded-lg
                   BgBlue
-                  text-white
+                  text-[#F1E2C6]
                   flex items-center justify-center
                   text-xl
                   transition-transform duration-300
@@ -416,7 +434,7 @@ export default function FAQSection() {
                   >
                     <p
                       className={`
-                    text-white
+                    text-[#F1E2C6]
                     text-lg
                     leading-tight
                     Font_CI
