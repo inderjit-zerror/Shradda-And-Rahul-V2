@@ -132,7 +132,7 @@ const HeartSection = () => {
         scrollTrigger: {
           trigger: section,
           start: "top -10%",
-          toggleActions: "play none none reset",
+          toggleActions: "play none none reverse",
         },
         defaults: { duration: 1.4, ease: "power3.out" },
       });
@@ -187,7 +187,7 @@ const HeartSection = () => {
             <div
               key={index}
               ref={(el) => (imageRefs.current[index] = el)}
-              className="absolute bg-white p-[6px] shadow-xl opacity-0"
+              className="absolute  shadow-xl opacity-0"
               style={{
                 width: size.w + 12,
                 height: size.h + 12,

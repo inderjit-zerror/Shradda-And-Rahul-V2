@@ -228,6 +228,21 @@ button {
   animation: none !important;
 }
 
+/* @keyframes sound-wave {
+  0%,
+  100% {
+    transform: scaleY(0.5);
+  }
+
+  50% {
+    transform: scaleY(1.8);
+  }
+}
+
+.animate-sound-wave {
+  animation: sound-wave 0.8s ease-in-out infinite;
+} */
+
 @keyframes sound-wave {
   0%,
   100% {
@@ -241,7 +256,12 @@ button {
 
 .animate-sound-wave {
   animation: sound-wave 0.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
 }
+
+
+
 
 /* ;;;;;;;;;;;;;;;;; */
 .gg {
@@ -528,7 +548,7 @@ button {
 }
 
 #How_to_Nail_it_Cntr .pictos-label .picto-three {
-  bottom: 29.4117647059vw;
+  bottom: 0.4117647059vw;
   left: 55.8823529412vw;
   position: absolute;
   text-align: center;
@@ -783,13 +803,13 @@ button {
   }
 
   #How_to_Nail_it_Cntr .pictos-label .picto-three {
-    left: 950px;
-    bottom: 500px;
+    left: 1050px;
+    bottom: 260px;
   }
 
   #How_to_Nail_it_Cntr .pictos-label .picto-four {
-    left: 300px;
-    bottom: -50px;
+    left: 50px;
+    bottom: -200px;
   }
 }
 
