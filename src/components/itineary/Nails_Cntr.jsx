@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -92,19 +92,108 @@ const Nails_Cntr = () => {
   });
 
   const wardrobeCardsRef = useRef([]);
+
+  useEffect(() => {
+    const cards = wardrobeCardsRef.current.filter(Boolean);
+
+    // Set initial hidden state
+    gsap.set(cards, { opacity: 0, y: 60 });
+
+    const triggers = cards.map((card, i) =>
+      gsap.fromTo(
+        card,
+        { opacity: 0, y: 60, scale: 0.96 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.9,
+          ease: "power3.out",
+          delay: (i % 2) * 0.15, // stagger left/right column slightly
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%", // animation starts when card top hits 85% of viewport
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+            // markers: true,      // uncomment to debug trigger positions
+          },
+        },
+      ),
+    );
+
+    return () => {
+      // Cleanup ScrollTriggers on unmount
+      triggers.forEach(
+        (tween) => tween.scrollTrigger && tween.scrollTrigger.kill(),
+      );
+    };
+  }, [wardrobeData]);
+
+  const headingRef = useRef(null);
+  const paraRef = useRef(null);
+
+  useEffect(() => {
+    // const heading = headingRef.current;
+    // const text = heading.textContent;
+    // heading.innerHTML = text
+    //   .split("")
+    //   .map((char) =>
+    //     char === " "
+    //       ? " "
+    //       : `<span style="display:inline-block; opacity:0; transform: translateY(30px)">${char}</span>`,
+    //   )
+    //   .join("");
+
+    // const chars = heading.querySelectorAll("span");
+
+    gsap.set(paraRef.current, { opacity: 0, y: 30 });
+    gsap.set(headingRef.current, { opacity: 0, y: 30 });
+
+    gsap
+      .timeline({ defaults: { ease: "power3.out" } })
+      // .to(chars, {
+      //   opacity: 1,
+      //   y: 0,
+      //   duration: 0.6,
+      //   stagger: 0.03,
+      // })
+      .to(
+        headingRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+        },
+      )
+      .to(
+        paraRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+        },
+        "-=0.2",
+      );
+  }, []);
   return (
     <>
       <div id="How_to_Nail_it_Cntr" className="gg">
         <div className="row title ">
           <div className="mx-auto flex flex-col gap-10 justify-center items-center">
-            <h3 className="text-[5rem] font-semibold leading-none Font_CV mx-auto uppercase ">
+            <h3
+              ref={headingRef}
+              className="text-[5rem] font-semibold leading-none Font_CV mx-auto uppercase"
+            >
               Wedding itinerary
             </h3>
 
-            <p className=" max-w-[750px] capitalize! tracking-tight text-[#F1E2C6] text-[0.9rem] leading-[1.1rem]">
+            <p
+              ref={paraRef}
+              className="max-w-[750px] capitalize! tracking-tight text-[#F1E2C6] text-[0.9rem] leading-[1.1rem]"
+            >
               We've thoughtfully planned each moment of our special day. Please
               find the itinerary below and join us in celebrating every chapter
-              of our wedding journey.Join us as we celebrate our wedding day
+              of our wedding journey. Join us as we celebrate our wedding day
               with love, laughter, and unforgettable moments. Below is a
               schedule of the day's events to help you enjoy every special
               moment with us.
@@ -874,134 +963,130 @@ const Nails_Cntr = () => {
 
       {/* ======================================================================== */}
       <div className=" w-full h-fit pt-[10vh] bg-[#6C1D35]">
-
-      
-      <div className="w-[70vw] mx-auto pb-[20vh]">
-
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {wardrobeData.map((guide, gi) => (
-          <div
-            key={gi}
-            ref={(el) => (wardrobeCardsRef.current[gi] = el)}
-            className="relative rounded-sm overflow-hidden group cursor-default"
-            style={{
-              backgroundColor: "#F1E2C6",
-              border: "1px solid rgba(201,168,76,0.15)",
-            }}
-          >
-            {/* Top border accent */}
-            <div
-              className="absolute top-0 left-0 right-0 h-px opacity-40 group-hover:opacity-100 transition-opacity duration-500"
-              // style={{
-              //   background:
-              //     "linear-gradient(90deg, transparent, ##6C1D35, transparent)",
-              // }}
-            />
-            {/* Hover glow */}
-            <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%)",
-              }}
-            />
-
-            <div className="relative z-10 p-8">
-              {/* Icon */}
-              <div className="text-3xl mb-4" style={{ color: "#6C1D35" }}>
-                {guide.icon}
-              </div>
-
-              {/* Guide title */}
-              <h3
-                className="mb-1 Font_CV uppercase font-semibold "
-                style={{
-                  color: "#6C1D35",
-                  fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)",
-                  // fontWeight: 300,
-                  // fontStyle: "italic",
-                  // fontFamily: "'Cormorant Garamond', serif",
-                }}
-              >
-                {guide.guide}
-              </h3>
-              <p
-                className="text-xs tracking-[0.3em] uppercase mb-6"
-                style={{
-                  color: "#6C1D35",
-                  fontFamily: "'Montserrat', sans-serif",
-                }}
-              >
-                {guide.subtitle}
-              </p>
-
-              {/* Divider */}
+        <div className="w-[70vw] mx-auto pb-[20vh]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {wardrobeData.map((guide, gi) => (
               <div
-                className="w-10 h-px mb-6"
-                style={{ background: "#6C1D35" }}
-              />
+                key={gi}
+                ref={(el) => (wardrobeCardsRef.current[gi] = el)}
+                className="relative rounded-sm overflow-hidden group cursor-default"
+                style={{
+                  backgroundColor: "#F1E2C6",
+                  border: "1px solid rgba(201,168,76,0.15)",
+                }}
+              >
+                {/* Top border accent */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-px opacity-40 group-hover:opacity-100 transition-opacity duration-500"
+                  // style={{
+                  //   background:
+                  //     "linear-gradient(90deg, transparent, ##6C1D35, transparent)",
+                  // }}
+                />
+                {/* Hover glow */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%)",
+                  }}
+                />
 
-              {/* Dress list */}
-              <div className="space-y-3 mb-6">
-                {guide.items.map((item, ii) => (
-                  <div
-                    key={ii}
-                    className="flex items-start gap-3 py-2"
+                <div className="relative z-10 p-8">
+                  {/* Icon */}
+                  <div className="text-3xl mb-4" style={{ color: "#6C1D35" }}>
+                    {guide.icon}
+                  </div>
+
+                  {/* Guide title */}
+                  <h3
+                    className="mb-1 Font_CV uppercase font-semibold "
                     style={{
-                      borderBottom: "1px solid rgba(201,168,76,0.08)",
+                      color: "#6C1D35",
+                      fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)",
+                      // fontWeight: 300,
+                      // fontStyle: "italic",
+                      // fontFamily: "'Cormorant Garamond', serif",
                     }}
                   >
-                    <span
-                      className="text-xs mt-0.5"
-                      style={{ color: "#6C1D35" }}
-                    >
-                      ◈
-                    </span>
-                    <div>
-                      <p
-                        className="text-xs uppercase tracking-widest mb-0.5"
-                        style={{
-                          color: "#6C1D35",
-                          fontFamily: "'Montserrat', sans-serif",
-                        }}
-                      >
-                        {item.event}
-                      </p>
-                      <p
-                       className="text-[14px]"
-                        style={{
-                          color: "#6C1D35",
-                          // fontFamily: "'Cormorant Garamond', serif",
-                          fontSize: "1rem",
-                          // fontStyle: "italic",
-                        }}
-                      >
-                        {item.dress}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                    {guide.guide}
+                  </h3>
+                  <p
+                    className="text-xs tracking-[0.3em] uppercase mb-6"
+                    style={{
+                      color: "#6C1D35",
+                      fontFamily: "'Montserrat', sans-serif",
+                    }}
+                  >
+                    {guide.subtitle}
+                  </p>
 
-              {/* Note */}
-              <p
-                className="text-sm text-[14px]"
-                style={{
-                  color: "rgba(255,255,255,0.45)",
-                  // fontFamily: "'Cormorant Garamond', serif",
-                  // fontStyle: "italic",
-                  borderTop: "1px solid rgba(201,168,76,0.12)",
-                  paddingTop: "1rem",
-                }}
-              >
-                {guide.note}
-              </p>
-            </div>
+                  {/* Divider */}
+                  <div
+                    className="w-10 h-px mb-6"
+                    style={{ background: "#6C1D35" }}
+                  />
+
+                  {/* Dress list */}
+                  <div className="space-y-3 mb-6">
+                    {guide.items.map((item, ii) => (
+                      <div
+                        key={ii}
+                        className="flex items-start gap-3 py-2"
+                        style={{
+                          borderBottom: "1px solid rgba(201,168,76,0.08)",
+                        }}
+                      >
+                        <span
+                          className="text-xs mt-0.5"
+                          style={{ color: "#6C1D35" }}
+                        >
+                          ◈
+                        </span>
+                        <div>
+                          <p
+                            className="text-[18px] uppercase tracking-widest mb-0.5 font-bold"
+                            style={{
+                              color: "#6C1D35",
+                              fontFamily: "'Montserrat', sans-serif",
+                            }}
+                          >
+                            {item.event}
+                          </p>
+                          <p
+                            className="text-[14px] font-medium"
+                            style={{
+                              color: "#6C1D35",
+                              // fontFamily: "'Cormorant Garamond', serif",
+                              fontSize: "1rem",
+                              // fontStyle: "italic",
+                            }}
+                          >
+                            {item.dress}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Note */}
+                  <p
+                    className="text-sm text-[14px]"
+                    style={{
+                      color: "#6C1D35",
+                      // fontFamily: "'Cormorant Garamond', serif",
+                      // fontStyle: "italic",
+                      borderTop: "1px solid rgba(201,168,76,0.12)",
+                      paddingTop: "1rem",
+                    }}
+                  >
+                    {guide.note}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      </div>
+        </div>
       </div>
     </>
   );

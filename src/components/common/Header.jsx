@@ -10,7 +10,7 @@ const Header = () => {
           <div className="w-fit h-fit flex justify-center items-center   md:my-auto">
             <Link href={`/`}>
               <img
-                src={`/logo.svg`}
+                src={`/logo2.svg`}
                 alt="Logo"
                 className="h-[50px] object-cover object-center"
               />
@@ -19,7 +19,7 @@ const Header = () => {
 
           <div className="w-[1px] h-[50px] COLOR_BG_RED mx-10 COLOR_TEXT_RED md:my-auto max-md:w-[50px] max-md:h-[1px] max-md:hidden "></div>
 
-          <div className="w-1/2 flex flex-col  w-fit  text-[#6C1D35] max-sm:w-full max-md:mt-5 ml-auto   max-md:text-center   justify-center">
+          <div className="w-1/2 flex flex-col  w-fit  text-[#6C1D35] font-medium max-sm:w-full max-md:mt-5 ml-auto   max-md:text-center   justify-center">
             <span className=" Font_CV">
               ⁠For any wedding-related questions, please reach out to Shradda &
               Rahul wedding planning team at:
