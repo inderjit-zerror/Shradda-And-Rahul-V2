@@ -56,7 +56,7 @@ const HeroSectionVenue = () => {
       className="w-full h-[100vh] max-md:h-svh flex overflow-hidden  relative bg-[#6C1D35]"
     >
       <img
-        src={`/new_img/BG.jpeg`}
+        src={`/new_img/AA.jpeg`}
         alt="IMG"
         className="w-full h-full object-cover absolute top-0 left-0  object-bottom Igm  opacity-0 "
       />

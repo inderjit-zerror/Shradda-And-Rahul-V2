@@ -20,12 +20,12 @@ const Header = () => {
           <div className="w-[1px] h-[50px] COLOR_BG_RED mx-10 COLOR_TEXT_RED md:my-auto max-md:w-[50px] max-md:h-[1px] max-md:hidden "></div>
 
           <div className="w-1/2 flex flex-col  w-fit  text-[#6C1D35] font-medium max-sm:w-full max-md:mt-5 ml-auto   max-md:text-center   justify-center">
-            <span className=" Font_CV">
+            <span className=" ">
               ⁠For any wedding-related questions, please reach out to Shradda &
               Rahul wedding planning team at:
             </span>
 
-            <span className=" Font_CV flex gap-2 max-md:gap-0 max-md:mt-2 sm:ml-auto  max-md:flex-col max-md:text-[14px] max-md:mx-auto max-md:text-center">
+            <span className="  flex gap-2 max-md:gap-0 max-md:mt-2 sm:ml-auto  max-md:flex-col max-md:text-[14px] max-md:mx-auto max-md:text-center">
               <a href="mailto:sonalskushie@gmail.com">
                 <span className=" relative flex flex-col w-fit  group  cursor-pointer select-none max-md:mx-auto ">
                   {" "}

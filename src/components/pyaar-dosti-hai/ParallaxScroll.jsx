@@ -10,28 +10,33 @@ gsap.registerPlugin(ScrollTrigger);
 const DATA = [
   {
     img: "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
+    // img: "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
     text: "In 1669, Dutch artist Willem Kalf painted Still Life with a Chinese Porcelain Jar.",
-    year: "2020",
+    year: "Mumba",
   },
   {
     img: "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
+    // img: "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
     text: "Venetian goblet, and Ottoman rug depicted in his painting - circulated widely, and were a sign of cosmopolitan taste.",
-    year: "2021",
+    year: "NYC",
   },
   {
     img: "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
+    // img: "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
     text: "Kalf worked in 1600s Amsterdam, a dynamic trade center where luxurious imports - like the Chinese porcelain jar,",
-    year: "2022",
+    year: "Singapore",
   },
   {
     img: "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
+    // img: "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
     text: "For the next two centuries of its existence, it's hard to know much about how and where this painting traveled.",
-    year: "2023",
+    year: "Goa",
   },
   {
     img: "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
+    // img: "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
     text: "In 1864, it was sold at auction in Paris, but the name of the buyer remains unknown.",
-    year: "2024",
+    year: "Bangkok",
   },
 
 ];
@@ -346,7 +351,7 @@ export default function ParallaxScroll() {
           {DATA.map((item, i) => (
             <div
               key={i}
-              className="text_item  leading-none text-[#6C1D35] font-medium absolute inset-0 text-xl text-center"
+              className="text_item  leading-none text-[#6C1D35] Font_CV font-medium absolute inset-0 text-xl text-center"
             >
               {item.text}
             </div>
@@ -361,7 +366,7 @@ export default function ParallaxScroll() {
               {DATA.map((item, i) => (
                 <div
                   key={i}
-                  className="h-4 flex font-semibold items-center justify-center"
+                  className="h-4 flex font-medium items-center justify-center"
                 >
                   {item.year}
                 </div>
